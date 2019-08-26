@@ -2,7 +2,7 @@ const game = new Game();
 
 
 function setup() {
-    let canvas = createCanvas(windowWidth / 3, windowHeight);
+    let canvas = createCanvas(windowWidth / 2.5, windowHeight);
     canvas.parent("canvas");
     background("black");
     game.setup();
