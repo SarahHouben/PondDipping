@@ -13,6 +13,9 @@ function draw() {
     game.draw();
 }
 
+function mousePressed() {
+    game.bubbleClick();
+}
 
 function windowResized() {
     resizeCanvas(windowWidth / 3, windowHeight);
