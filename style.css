@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* XXXXXXXXXX           GAME CANVAS            XXXXXXXXXX */
+
+
+
+#canvas {
+    padding-right: 5vw;
+}
+
+/* XXXXXXXXXX       INFORMATION SECTION (RIGHT SIDE)      XXXXXXXXXX */
+
+
+h1 {
+    text-align: center;
+    font-size: 3.5em;
+    margin-top: 0;
+    margin-bottom: 8vh;
+}
+
+
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.7em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12vw 0 12vw;
+
+}
+
+#information {
+    width: 400px;
+    padding-top: 5vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin: 0 5vw;
+    border: black 1px solid;
+}
+
+/* XXXXXXXXXX      UPPER -  INFORMATION SECTION (RIGHT SIDE)      XXXXXXXXXX */
+
+.score-level {
+    display: flex;
+    padding-bottom: 5vh;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    align-items: flex-start
+}
+
+.level {
+    text-align: right;
+    width: 200px;
+}
+
+/* XXXXXXXXXX      LOWER -  INFORMATION SECTION (RIGHT SIDE)      XXXXXXXXXX */
+
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 30vh;
+    height: 30vh;
+
+}
