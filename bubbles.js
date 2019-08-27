@@ -18,14 +18,25 @@ class Bubble {
         stroke(255);
         fill(this.col);
         ellipse(this.x, this.y, this.diameter, this.diameter);
+
+        //Shows answer in the bubble
+        text(this.answer, this.x, this.y);
+        textSize(30);
+        textAlign(CENTER);
+        textFont();
+
         //move bubbles upwards
         this.y -= 3; //Lv 1: 1.8, Lv 2: 2, Lv 3: 2.5
+
+
+
 
         //Collision check - end game if bubble reaches TOP of canvas
         if (this.y - (this.diameter / 2) <= 0) {
 
             //Pops 1 to 3 bubbles if they reach top of canvas
             game.bubbles[game.group].splice(0, 3);
+            //ADD POP SOUND EFFECT  POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT XXXXXXXXXX
 
             //Ends game
             game.gameOver();
@@ -62,6 +73,7 @@ class Bubble {
 
                 //Pop all bubbles (prevents game over by left-over bubbles touching canvas top)
                 game.bubbles[game.group].splice(0, 3);
+                //ADD POP SOUND EFFECT  POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT XXXXXXXXXX
 
                 //Initiate new question: Add 1 to   game.group counter to Start next Question group 
                 game.group += 1;
@@ -78,6 +90,7 @@ class Bubble {
 
                 // Pop clicked bubble
                 game.bubbles[game.group].splice(bubbleIndex, 1);
+                //ADD POP SOUND EFFECT  POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT XXXXXXXXXX
             }
 
             // Calculate total Score

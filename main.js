@@ -22,3 +22,4 @@ function mousePressed() {
 function windowResized() {
     resizeCanvas(windowWidth / 3, windowHeight);
 }
+

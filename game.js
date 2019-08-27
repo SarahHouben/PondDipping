@@ -12,13 +12,13 @@ class Game {
         this.background.setup();
 
 
-        let bubble1A = new Bubble('answer', false, 0);
-        let bubble1B = new Bubble('answerB', false, 1);
-        let bubble1C = new Bubble('answerB', true, 2);
+        let bubble1A = new Bubble('Giraffe', false, 0);
+        let bubble1B = new Bubble('Cow', false, 1);
+        let bubble1C = new Bubble('Bird', true, 2);
 
-        let bubble2A = new Bubble('answer', false, 0);
-        let bubble2B = new Bubble('answerB', false, 1);
-        let bubble2C = new Bubble('answerB', true, 2);
+        let bubble2A = new Bubble('Ant', false, 0);
+        let bubble2B = new Bubble('Bug', false, 1);
+        let bubble2C = new Bubble('Sugar', true, 2);
 
         let bubble3A = new Bubble('answer', false, 0);
         let bubble3B = new Bubble('answerB', false, 1);
@@ -71,7 +71,7 @@ class Game {
         if (this.group >= this.bubblesArray.length) {
             this.gameOver();
 
-            //Inititate new question round    
+            //  Inititate new question round
         } else {
             //Show the three bubbles for the first question
             let groupBubbles = this.bubbles[this.group];
@@ -80,8 +80,8 @@ class Game {
                 groupBubbles[j].move();
                 groupBubbles[j].display();
             }
-
         }
+
     };
 
 
