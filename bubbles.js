@@ -1,5 +1,5 @@
 class Bubble {
-    constructor(answer, correct, index) {
+    constructor(answer, correct) {
         this.x = random(140, width - 90);
         this.y = height + 100;
         this.col = color(218, 246, 250, 70);
@@ -86,8 +86,14 @@ class Bubble {
                 //Sound Effect Bubble popping
                 bubbleSound.play();
 
+
+                //SET-UP NEW ROUND
                 //Initiate new question: Add 1 to   game.group counter to Start next Question group 
                 game.group += 1;
+                //Replace Image
+                document.getElementById("question-image").src = `${imageArray[game.group]}`;
+                //Replace Question
+                document.querySelector(".question-text").innerText = `${questionArray[game.group]}`;
 
 
                 //WRONG ANSWER
@@ -118,4 +124,3 @@ class Bubble {
 
 
 }
-

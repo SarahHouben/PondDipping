@@ -84,7 +84,7 @@ class Game {
             for (let j = 0; j < groupBubbles.length; j++) {
                 groupBubbles[j].move();
                 // if (frameCount % 60 === 0) {
-                    groupBubbles[j].display();
+                groupBubbles[j].display();
                 // }
             }
         }
