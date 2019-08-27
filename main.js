@@ -1,6 +1,8 @@
 const game = new Game();
 
 
+
+
 function setup() {
     let canvas = createCanvas(windowWidth / 2.5, windowHeight);
     canvas.parent("canvas");

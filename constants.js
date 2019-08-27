@@ -1,2 +1,4 @@
-// const WIDTH = windowWidth;
-// const HEIGHT = windowHeight;
+//Score
+let minusPoints = 0;
+let plusPoints = 0;
+let totalScore

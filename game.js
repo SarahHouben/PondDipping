@@ -5,9 +5,11 @@ class Game {
         this.group = 0;
     };
 
-    setup() {
-        this.background.setup();
 
+
+    setup() {
+
+        this.background.setup();
 
 
         let bubble1A = new Bubble('answer', false, 0);
@@ -35,7 +37,7 @@ class Game {
         let bubble6C = new Bubble('answerB', true, 2);
 
 
-        let bubblesArray = [
+        this.bubblesArray = [
             [bubble1A, bubble1B, bubble1C],
             [bubble2A, bubble2B, bubble2C],
             [bubble3A, bubble3B, bubble3C],
@@ -44,47 +46,57 @@ class Game {
             [bubble6A, bubble6B, bubble6C],
         ];
 
-        this.bubbles = [...bubblesArray];
+        this.bubbles = [...this.bubblesArray];
+
     };
 
 
+
+    gameOver() {
+
+        console.log("GameOver")
+        noLoop();
+
+    };
+
+
+
     draw() {
+
         clear();
 
         this.background.draw();
 
-        //Show the three bubbles for the first question
-        let groupBubbles = this.bubbles[this.group];
-        // when level is 0, it becomes this.bubbles[0]
-        for (let j = 0; j < groupBubbles.length; j++) {
-            groupBubbles[j].move();
-            groupBubbles[j].display();
-        }
+        //Check if there is another nested array left in bubblesArray
+        if (this.group >= this.bubblesArray.length) {
+            this.gameOver();
 
-    }
+            //Inititate new question round    
+        } else {
+            //Show the three bubbles for the first question
+            let groupBubbles = this.bubbles[this.group];
+            // when level is 0, it becomes this.bubbles[0]
+            for (let j = 0; j < groupBubbles.length; j++) {
+                groupBubbles[j].move();
+                groupBubbles[j].display();
+            }
+
+        }
+    };
+
+
 
     bubbleClick() {
+        //Checks whether there is a group left
+        const group = this.bubbles[this.group]
+        if (!group) return;
 
-        for (let i = 0; i < this.bubbles[this.group].length; i++) {
-            this.bubbles[this.group][i].clicked(i);
-
+        //Initiates clicked function
+        for (let i = 0; i < group.length; i++) {
+            group[i].clicked(i);
         }
 
+    };
 
-    }
-
-
-
-
-    checkAnswerLevelUp() {
-        //check if answer is correct
-        //if correct, give one point, llevel up
-        //if false, give minus point, delete bubble (with splice)
-    }
 
 }
-
-//check answer of bubble (true or false)
-
-// function falseAnswer ->level down
-//function correctAnswer -> level up
