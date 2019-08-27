@@ -8,6 +8,10 @@ function setup() {
     canvas.parent("canvas");
     background("black");
     game.setup();
+
+    //Sound Effect for popping bubble
+    soundFormats('mp3');
+    bubbleSound = loadSound('./sound_assets/bubble_pop.mp3');
 }
 
 
@@ -22,4 +26,3 @@ function mousePressed() {
 function windowResized() {
     resizeCanvas(windowWidth / 3, windowHeight);
 }
-

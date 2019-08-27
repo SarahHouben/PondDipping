@@ -55,6 +55,11 @@ class Game {
     gameOver() {
 
         console.log("GameOver")
+        //PRINT FINAL SCORE (OUT OF POSSIBLE SCORE)
+        //if score < 5 => you can do better next time
+        // if score > 5 nice one! 
+        // if full score = Genius
+        //etc etc
         noLoop();
 
     };
@@ -78,7 +83,9 @@ class Game {
             // when level is 0, it becomes this.bubbles[0]
             for (let j = 0; j < groupBubbles.length; j++) {
                 groupBubbles[j].move();
-                groupBubbles[j].display();
+                // if (frameCount % 60 === 0) {
+                    groupBubbles[j].display();
+                // }
             }
         }
 

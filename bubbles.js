@@ -5,6 +5,8 @@ class Bubble {
         this.col = color(218, 246, 250, 70);
         this.diameter = random(140, 180);
 
+        this.rand = 0;
+
         this.answer = answer;
         this.correct = correct;
 
@@ -26,17 +28,24 @@ class Bubble {
         textFont();
 
         //move bubbles upwards
-        this.y -= 3; //Lv 1: 1.8, Lv 2: 2, Lv 3: 2.5
+        this.y -= 2; //Lv 1: 1.8, Lv 2: 2, Lv 3: 2.5
 
-
-
+        // this.rand = Math.floor(Math.random() * 2);
+        // console.log(this.rand);
+        // if (this.rand === 0) {
+        //     this.x -= 1;
+        // } else if (this.rand === 1) {
+        //     this.x += 1;
+        // }
 
         //Collision check - end game if bubble reaches TOP of canvas
         if (this.y - (this.diameter / 2) <= 0) {
 
+            //Sound Effect Bubble popping
+            bubbleSound.play();
+
             //Pops 1 to 3 bubbles if they reach top of canvas
             game.bubbles[game.group].splice(0, 3);
-            //ADD POP SOUND EFFECT  POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT XXXXXXXXXX
 
             //Ends game
             game.gameOver();
@@ -73,7 +82,9 @@ class Bubble {
 
                 //Pop all bubbles (prevents game over by left-over bubbles touching canvas top)
                 game.bubbles[game.group].splice(0, 3);
-                //ADD POP SOUND EFFECT  POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT XXXXXXXXXX
+
+                //Sound Effect Bubble popping
+                bubbleSound.play();
 
                 //Initiate new question: Add 1 to   game.group counter to Start next Question group 
                 game.group += 1;
@@ -90,7 +101,9 @@ class Bubble {
 
                 // Pop clicked bubble
                 game.bubbles[game.group].splice(bubbleIndex, 1);
-                //ADD POP SOUND EFFECT  POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT POP SOUND EFFECT XXXXXXXXXX
+
+                //Sound Effect Bubble popping
+                bubbleSound.play();
             }
 
             // Calculate total Score
@@ -105,3 +118,4 @@ class Bubble {
 
 
 }
+
