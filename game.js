@@ -3,7 +3,29 @@ class Game {
     constructor() {
         this.background = new Background();
         this.group = 0;
+        this.margin = [];
     };
+
+
+    createMargin() {
+
+        let space = (width / 3);
+        // console.log(space);
+        for (let i = 0; i < 3; i++) {
+            for (let j = 2; j > 0; j--) {
+
+                this.margin = [i * space, width - j * space]
+                console.log(i * space);
+                console.log(width - j * space);
+                // console.log(this.margin);
+                // console.log(i);
+                // console.log(j);
+            }
+        }
+        console.log(this.margin);
+    };
+
+
 
 
 
@@ -12,29 +34,29 @@ class Game {
         this.background.setup();
 
 
-        let bubble1A = new Bubble('Giraffe', false, 0);
-        let bubble1B = new Bubble('Cow', false, 1);
-        let bubble1C = new Bubble('Bird', true, 2);
+        let bubble1A = new Bubble('Giraffe', false, "margin");
+        let bubble1B = new Bubble('Cow', false, "margin");
+        let bubble1C = new Bubble('Bird', true, "margin");
 
-        let bubble2A = new Bubble('Ant', false, 0);
-        let bubble2B = new Bubble('Bug', false, 1);
-        let bubble2C = new Bubble('Sugar', true, 2);
+        let bubble2A = new Bubble('Ant', false, "margin");
+        let bubble2B = new Bubble('Bug', false, "margin");
+        let bubble2C = new Bubble('Sugar', true, "margin");
 
-        let bubble3A = new Bubble('answer', false, 0);
-        let bubble3B = new Bubble('answerB', false, 1);
-        let bubble3C = new Bubble('answerB', true, 2);
+        let bubble3A = new Bubble('answer', false, "margin");
+        let bubble3B = new Bubble('answerB', false, "margin");
+        let bubble3C = new Bubble('answerB', true, "margin");
 
-        let bubble4A = new Bubble('answer', false, 0);
-        let bubble4B = new Bubble('answerB', false, 1);
-        let bubble4C = new Bubble('answerB', true, 2);
+        let bubble4A = new Bubble('answer', false, "margin");
+        let bubble4B = new Bubble('answerB', false, "margin");
+        let bubble4C = new Bubble('answerB', true, "margin");
 
-        let bubble5A = new Bubble('answer', false, 0);
-        let bubble5B = new Bubble('answerB', false, 2);
-        let bubble5C = new Bubble('answerB', true, 2);
+        let bubble5A = new Bubble('answer', false, "margin");
+        let bubble5B = new Bubble('answerB', false, "margin");
+        let bubble5C = new Bubble('answerB', true, "margin");
 
-        let bubble6A = new Bubble('answer', false, 0);
-        let bubble6B = new Bubble('answerB', false, 1);
-        let bubble6C = new Bubble('answerB', true, 2);
+        let bubble6A = new Bubble('answer', false, "margin");
+        let bubble6B = new Bubble('answerB', false, "margin");
+        let bubble6C = new Bubble('answerB', true, "margin");
 
 
         this.bubblesArray = [
@@ -60,6 +82,11 @@ class Game {
         // if score > 5 nice one! 
         // if full score = Genius
         //etc etc
+
+        document.getElementById("question-image").src = `./question_assets/GameOver.jpg`;
+        document.querySelector(".question-text").innerText = "";
+        document.querySelector(".question h2").innerText = "Game Over";
+
         noLoop();
 
     };
@@ -71,6 +98,11 @@ class Game {
         clear();
 
         this.background.draw();
+
+        //Set correct Image
+        document.getElementById("question-image").src = `${imageArray[game.group]}`;
+        //Set correct Question
+        document.querySelector(".question-text").innerText = `${questionArray[game.group]}`;
 
         //Check if there is another nested array left in bubblesArray
         if (this.group >= this.bubblesArray.length) {

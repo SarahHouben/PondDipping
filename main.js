@@ -4,10 +4,12 @@ const game = new Game();
 
 
 function setup() {
-    let canvas = createCanvas(windowWidth / 2.5, windowHeight);
+    let canvas = createCanvas(windowWidth / 2.2, windowHeight);
     canvas.parent("canvas");
     background("black");
+
     game.setup();
+    game.createMargin();
 
     //Sound Effect for popping bubble
     soundFormats('mp3');
@@ -24,6 +26,5 @@ function mousePressed() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth / 3, windowHeight);
+    resizeCanvas(windowWidth / 2.2, windowHeight);
 }
-

@@ -1,11 +1,14 @@
 class Bubble {
-    constructor(answer, correct) {
+    constructor(answer, correct, margin) {
         this.x = random(140, width - 90);
-        this.y = height + 100;
+        // this.x = random(game.margin[0], game.margin[1]);
+        console.log(game.margin[0]);
+
+        this.y = random(height + 100, height + 250);
         this.col = color(218, 246, 250, 70);
         this.diameter = random(140, 180);
 
-        this.rand = 0;
+        this.margin = margin;
 
         this.answer = answer;
         this.correct = correct;
@@ -29,14 +32,6 @@ class Bubble {
 
         //move bubbles upwards
         this.y -= 2; //Lv 1: 1.8, Lv 2: 2, Lv 3: 2.5
-
-        // this.rand = Math.floor(Math.random() * 2);
-        // console.log(this.rand);
-        // if (this.rand === 0) {
-        //     this.x -= 1;
-        // } else if (this.rand === 1) {
-        //     this.x += 1;
-        // }
 
         //Collision check - end game if bubble reaches TOP of canvas
         if (this.y - (this.diameter / 2) <= 0) {
@@ -86,14 +81,8 @@ class Bubble {
                 //Sound Effect Bubble popping
                 bubbleSound.play();
 
-
-                //SET-UP NEW ROUND
                 //Initiate new question: Add 1 to   game.group counter to Start next Question group 
                 game.group += 1;
-                //Replace Image
-                document.getElementById("question-image").src = `${imageArray[game.group]}`;
-                //Replace Question
-                document.querySelector(".question-text").innerText = `${questionArray[game.group]}`;
 
 
                 //WRONG ANSWER
