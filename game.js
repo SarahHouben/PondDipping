@@ -34,7 +34,6 @@ class Game {
         this.background.setup();
 
 
-
         //Questions-Array
         this.questionArray = ["Question1", "Question2", "Question3", "Question4", "Question5", "Question6"];
 
@@ -84,6 +83,7 @@ class Game {
             [bubble4A, bubble4B, bubble4C],
             [bubble5A, bubble5B, bubble5C],
             [bubble6A, bubble6B, bubble6C],
+
         ];
 
         // this.bubblesArray = [
@@ -101,22 +101,34 @@ class Game {
 
         this.bubbles = [...this.bubblesArray];
 
+        //Calculate possible points (each correct answer is worth one point)
+        possiblePoints = this.bubblesArray.length;
+
     };
 
 
 
     gameOver() {
 
-        console.log("GameOver")
-        //PRINT FINAL SCORE (OUT OF POSSIBLE SCORE)
-        //if score < 5 => you can do better next time
-        // if score > 5 nice one! 
-        // if full score = Genius
-        //etc 
-
+        //Show game over display
         document.getElementById("question-image").src = `./question_assets/GameOver.jpg`;
-        document.querySelector(".question-text").innerText = "";
         document.querySelector(".question h2").innerText = "Game Over";
+
+        //Display message "scored points out of possible points"
+        if (totalScore <= 0) {
+            document.querySelector(".question-text").innerText = `Nice try! You reached ${totalScore} out of ${possiblePoints} possible points.`;
+        } else if (totalScore >= 0 && totalScore < possiblePoints / 2) {
+            document.querySelector(".question-text").innerText = `Nice one! You reached ${totalScore} out of ${possiblePoints} possible points.`;
+        } else if (totalScore <= possiblePoints / 2) {
+            document.querySelector(".question-text").innerText = `Well done! You reached ${totalScore} out of ${possiblePoints} possible points.`;
+        } else if (totalScore <= possiblePoints / 4) {
+            document.querySelector(".question-text").innerText = `Great Job! You reached ${totalScore} out of ${possiblePoints} possible points.`;
+        } else if (totalScore === possiblePoints) {
+            document.querySelector(".question-text").innerText = `Tremendous! You scored all ${possiblePoints} possible points!`;
+        } else {
+            document.querySelector(".question-text").innerText = `You reached ${totalScore} out of ${possiblePoints} possible points.`;
+        }
+
 
         backgroundSound.stop();
 

@@ -23,7 +23,7 @@ function setup() {
 
 }
 
-
+//ON BUTTON CLICK INITIATE FUNCTION DRAW AND SHOW GAME HTML
 function draw() {
     game.draw();
 }

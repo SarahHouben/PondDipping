@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>PondDipping</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+  <!-- <script src=""></script> -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  
+
+  <div class="container">
+    <section id="canvas"></section>
+
+    <section id="information">
+
+      <h1>PondDipping</h1>
+
+      <div class="score-level">
+        <div class="score">
+          <h2>Score</h2>
+          <p class="plus-points">Points: 0</p>
+          <p class="minus-points">Minus-points: 0</p>
+          <h3 class="total-score"><strong>Total Score: 0</strong></h3>
+        </div>
+        <div class="level">
+          <h2>Level</h2>
+        </div>
+      </div>
+
+      <div class="question">
+        <h2>Question</h2>
+        <p class="question-text">What am I?</p>
+        <img id="question-image" src="./question_assets/GameOver.jpg" alt="image" />
+      </div>
+    </section>
+  </div>
+
+  <script src="p5.sound.js"></script>
+  <script src="constants.js"></script>
+  <script src="bubbles.js"></script>
+  <script src="questions.js"></script>
+  <script src="background.js"></script>
+  <script src="game.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
