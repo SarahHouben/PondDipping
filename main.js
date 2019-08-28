@@ -9,11 +9,12 @@ function setup() {
     background("black");
 
     game.setup();
-    game.createMargin();
+    // game.createMargin();
 
     //Sound Effect for popping bubble
     soundFormats('mp3');
     bubbleSound = loadSound('./sound_assets/bubble_pop.mp3');
+
 }
 
 

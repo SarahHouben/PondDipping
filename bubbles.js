@@ -1,14 +1,17 @@
 class Bubble {
-    constructor(answer, correct, margin) {
-        this.x = random(140, width - 90);
+    constructor(answer, correct, x, level, margin) {
+        // this.x = random(140, width - 90);
         // this.x = random(game.margin[0], game.margin[1]);
-        console.log(game.margin[0]);
+        // this.margin = margin;
+        // console.log(game.margin[0]);
 
-        this.y = random(height + 100, height + 250);
-        this.col = color(218, 246, 250, 70);
+        this.x = x;
+        this.y = random(height + 150, height + 350);
         this.diameter = random(140, 180);
 
-        this.margin = margin;
+        this.col = color(218, 246, 250, 70);
+
+        this.level = level;
 
         this.answer = answer;
         this.correct = correct;
@@ -19,7 +22,7 @@ class Bubble {
 
     display() {
 
-        //draws bubbles
+        //Draw bubbles
         stroke(255);
         fill(this.col);
         ellipse(this.x, this.y, this.diameter, this.diameter);
@@ -30,8 +33,27 @@ class Bubble {
         textAlign(CENTER);
         textFont();
 
-        //move bubbles upwards
-        this.y -= 2; //Lv 1: 1.8, Lv 2: 2, Lv 3: 2.5
+
+        //Move Bubbles upwards 
+        //Change speed according to Level
+        switch (this.level) {
+            case 1:
+                this.y -= 1.9;
+                break;
+            case 2:
+                this.y -= 2.3;
+                break;
+            case 3:
+                this.y -= 2.6;
+                break;
+            default:
+                this.y -= 1.9;
+        }
+
+        //Display correct Level 
+        document.querySelector(".level h2").innerText = `Level ${this.level}`;
+
+
 
         //Collision check - end game if bubble reaches TOP of canvas
         if (this.y - (this.diameter / 2) <= 0) {
