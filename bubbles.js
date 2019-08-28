@@ -126,7 +126,7 @@ class Bubble {
             // Calculate total Score
             totalScore = plusPoints - minusPoints;
             // Show Total Score in browser
-            document.querySelector(".total-score").innerText = `Total Score: ${totalScore}`
+            document.querySelector(".total-score").innerText = `Score: ${totalScore}`
         }
 
         return false;
