@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>PondDipping</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
-  <!-- <script src=""></script> -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
 </head>
@@ -17,27 +16,35 @@
   <div class="container">
     <section id="canvas"></section>
 
-    <section id="information">
+    <section id="intro-information">
 
-      <h1>PondDipping</h1>
+      <h1 class="intro-title">PondDipping</h1>
 
-      <div class="score-level">
-        <div class="score">
-          <h2>Score</h2>
-          <p class="plus-points">Points: 0</p>
-          <p class="minus-points">Minus-points: 0</p>
-          <h3 class="total-score"><strong>Total Score: 0</strong></h3>
-        </div>
-        <div class="level">
-          <h2>Level</h2>
-        </div>
+      <div class="intro">
+        <h2>Peek beneath the surface</h2>
+        <p> <a target="blank"
+            href="https://www.nottinghamshirewildlife.org/nature-reserves/attenborough-nature-reserve?gclid=EAIaIQobChMIv63MmMul5AIVj-R3Ch20dwsvEAAYASAAEgIC-fD_BwE">Attenborough
+            Nature Reserve</a> is a haven for waterbirds. But what lives underneath the water's surface?
+        </p>
+
+        <p>
+          Let's explore how well you know the lesser known creatures that also inhabit the waters!
+        </p>
       </div>
 
-      <div class="question">
-        <h2>Question</h2>
-        <p class="question-text">What am I?</p>
-        <img id="question-image" src="./question_assets/GameOver.jpg" alt="image" />
+      <div class="how-to">
+        <h2>How to play</h2>
+        <p>Click on the bubble with the correct answer to pop it and collect points!</p>
+        <p>But watch out - each wrong bubble that you pop, deducts a point!</p>
+        <p>Oh, and don't let the bubbles touch the top of the screen or it's game over!</p>
       </div>
+
+      <!-- Button with link to actual game -->
+      <a href="game.html">
+        <button>Let's Start!</button>
+      </a>
+
+
     </section>
   </div>
 

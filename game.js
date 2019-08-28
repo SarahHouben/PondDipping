@@ -3,7 +3,7 @@ class Game {
     constructor() {
         this.background = new Background();
         this.group = 0;
-        this.margin = [];
+        // this.margin = [];
     };
 
 
@@ -116,17 +116,19 @@ class Game {
 
         //Display message "scored points out of possible points"
         if (totalScore <= 0) {
-            document.querySelector(".question-text").innerText = `Nice try! You reached ${totalScore} out of ${possiblePoints} possible points.`;
+            document.querySelector(".question-text").innerText = `${totalScore} from ${possiblePoints} points. You still have a lot of exploring to do!`;
+        } else if (totalScore === 1) {
+            document.querySelector(".question-text").innerText = `Nice try! You scored ${totalScore} of ${possiblePoints} points. You still have a lot of exploring to do!`;
         } else if (totalScore >= 0 && totalScore < possiblePoints / 2) {
-            document.querySelector(".question-text").innerText = `Nice one! You reached ${totalScore} out of ${possiblePoints} possible points.`;
-        } else if (totalScore <= possiblePoints / 2) {
-            document.querySelector(".question-text").innerText = `Well done! You reached ${totalScore} out of ${possiblePoints} possible points.`;
-        } else if (totalScore <= possiblePoints / 4) {
-            document.querySelector(".question-text").innerText = `Great Job! You reached ${totalScore} out of ${possiblePoints} possible points.`;
+            document.querySelector(".question-text").innerText = `Nice try! You scored ${totalScore} out of ${possiblePoints} points. Time to explore the underwater-world further!`;
+        } else if (totalScore <= possiblePoints / 3 && totalScore < possiblePoints / 4) {
+            document.querySelector(".question-text").innerText = `Well done! You've obviously been PondDipping before! You scored ${totalScore} out of ${possiblePoints} points.`;
+        } else if (totalScore <= possiblePoints / 4 && totalScore < possiblePoints) {
+            document.querySelector(".question-text").innerText = `Great Job! You really know Attenborough's underwater-world! You scored ${totalScore} out of ${possiblePoints} points.`;
         } else if (totalScore === possiblePoints) {
-            document.querySelector(".question-text").innerText = `Tremendous! You scored all ${possiblePoints} possible points!`;
+            document.querySelector(".question-text").innerText = `Tremendous - You're a true PondDipping-Pro! You scored all ${possiblePoints} points!`;
         } else {
-            document.querySelector(".question-text").innerText = `You reached ${totalScore} out of ${possiblePoints} possible points.`;
+            document.querySelector(".question-text").innerText = `You scored ${totalScore} out of ${possiblePoints} points.`;
         }
 
 
@@ -144,17 +146,10 @@ class Game {
 
         this.background.draw();
 
-
-
-        //Set correct Level
-        // document.querySelector(".level h2").innerText = `Level ${game.bubbles[game.group][0].level}`;
-
         //Display correct Image
         document.getElementById("question-image").src = `${this.imageArray[this.group]}`;
         //Display correct Question
         document.querySelector(".question-text").innerText = `${this.questionArray[this.group]}`;
-
-
 
         //Check if there is another nested array left in bubblesArray
         if (this.group >= this.bubblesArray.length) {
