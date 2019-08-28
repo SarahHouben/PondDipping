@@ -79,6 +79,14 @@ p {
     margin: 0 0 3vh 0;
 }
 
+.plus-points {
+    margin-right: 20px;
+}
+
+.total-score {
+    margin-left: 20px;
+}
+
 .total-score {
     display: flex;
     align-items: center;

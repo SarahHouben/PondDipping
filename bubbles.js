@@ -7,7 +7,7 @@ class Bubble {
 
         this.x = x;
         this.y = random(height + 150, height + 350);
-        this.diameter = random(140, 180);
+        this.diameter = random(170, 200);
 
         this.col = color(218, 246, 250, 70);
 

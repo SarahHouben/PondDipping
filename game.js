@@ -35,45 +35,75 @@ class Game {
 
 
         //Questions-Array
-        this.questionArray = ["What animal species can’t be found in the waters of Attenborough Nature Reserve?", "Question2", "Question3", "Question4", "Question5", "Question6"];
+        this.questionArray = ["Zooplankton is the name for small aquatic…",
+            "What animal species can’t be found in the waters of Attenborough Nature Reserve?",
+            "The presence of Gammarids is an indicator for good water…",
+            "How large are Water Fleas?",
+            "Water Slaters are closely related to…",
+            "Why are crustaceans of the family Cyclopidae named after the mythical creature cyclops? Because of their…",
+            "Which country does the invasive Bloody Red Shrimp stem from?",
+            "The tiny crustacean Polyphemus pediculus is a…",
+            "Water Fleas help maintain their habitats as they…"
+        ];
 
         //Image-Array
-        this.imageArray = ["./question_assets/Q1.jpg", "./question_assets/Q2.jpg", "./question_assets/Q3.jpg", "./question_assets/Q4.jpg", "./question_assets/Q5.jpg", "./question_assets/Q6.jpg"];
+        this.imageArray = ["./question_assets/Q1.png",
+            "./question_assets/Q2.png",
+            "./question_assets/Q3.png",
+            "./question_assets/Q4.png",
+            "./question_assets/Q5.png",
+            "./question_assets/Q6.png",
+            "./question_assets/Q7.png",
+            "./question_assets/Q8.png",
+            "./question_assets/Q9.png"
+        ];
 
 
 
         //x-corrdinates for the positioning of the bubbles
-        let x1 = random(90, (width / 3) - 90);
-        let x2 = random((width / 3) + 90, (width / 3) * 2 - 90);
-        let x3 = random((width / 3) * 2 + 90, width - 90);
+        let x1 = random(100, (width / 3) - 100);
+        let x2 = random((width / 3) + 100, (width / 3) * 2 - 100);
+        let x3 = random((width / 3) * 2 + 100, width - 100);
 
 
         //Level 1
-        let bubble1A = new Bubble('Giraffe', false, x1, 1, "margin");
-        let bubble1B = new Bubble('Cow', false, x2, 1, "margin");
-        let bubble1C = new Bubble('Bird', true, x3, 1, "margin");
+        let bubble1A = new Bubble('Zoos', false, x1, 1, "margin");
+        let bubble1B = new Bubble('Plants', false, x2, 1, "margin");
+        let bubble1C = new Bubble('Animals', true, x3, 1, "margin");
 
-        let bubble2A = new Bubble('Ant', false, x1, 1, "margin");
-        let bubble2B = new Bubble('Bug', false, x2, 1, "margin");
-        let bubble2C = new Bubble('Sugar', true, x3, 1, "margin");
+        let bubble2A = new Bubble('Fish', false, x1, 1, "margin");
+        let bubble2B = new Bubble('Crustaceans', false, x2, 1, "margin");
+        let bubble2C = new Bubble('Crocodiles', true, x3, 1, "margin");
+
+        let bubble3A = new Bubble('Fluidity', false, x1, 1, "margin");
+        let bubble3B = new Bubble('Quality', true, x2, 1, "margin");
+        let bubble3C = new Bubble('Saltiness', false, x3, 1, "margin");
 
         //Level 2
-        let bubble3A = new Bubble('answer', false, x1, 2, "margin");
-        let bubble3B = new Bubble('answerB', false, x2, 2, "margin");
-        let bubble3C = new Bubble('answerB', true, x3, 2, "margin");
+        let bubble4A = new Bubble('1 – 5 cm', false, x1, 2, "margin");
+        let bubble4B = new Bubble('0.2 – 6 mm', true, x2, 2, "margin");
+        let bubble4C = new Bubble('10 cm', false, x3, 2, "margin");
 
-        let bubble4A = new Bubble('answer', false, x1, 2, "margin");
-        let bubble4B = new Bubble('answerB', false, x2, 2, "margin");
-        let bubble4C = new Bubble('answerB', true, x3, 2, "margin");
+        let bubble5A = new Bubble('Spiders', false, x1, 2, "margin");
+        let bubble5B = new Bubble('Dragonflies', false, x2, 2, "margin");
+        let bubble5C = new Bubble('Woodlice', true, x3, 2, "margin");
+
+        let bubble6A = new Bubble('Strength', false, x1, 2, "margin");
+        let bubble6B = new Bubble('Single eye', true, x2, 2, "margin");
+        let bubble6C = new Bubble('Colour', false, x3, 2, "margin");
 
         //Level 3
-        let bubble5A = new Bubble('answer', false, x1, 3, "margin");
-        let bubble5B = new Bubble('answerB', false, x2, 3, "margin");
-        let bubble5C = new Bubble('answerB', true, x3, 3, "margin");
+        let bubble7A = new Bubble('Spain', false, x1, 3, "margin");
+        let bubble7B = new Bubble('Canada', false, x2, 3, "margin");
+        let bubble7C = new Bubble('Russia', true, x3, 3, "margin");
 
-        let bubble6A = new Bubble('answer', false, x1, 3, "margin");
-        let bubble6B = new Bubble('answerB', false, x2, 3, "margin");
-        let bubble6C = new Bubble('answerB', true, x3, 3, "margin");
+        let bubble8A = new Bubble('Predator', true, x1, 3, "margin");
+        let bubble8B = new Bubble('Herbivore', false, x2, 3, "margin");
+        let bubble8C = new Bubble('Omnivore', false, x3, 3, "margin");
+
+        let bubble9A = new Bubble('Are tidy', false, x1, 3, "margin");
+        let bubble9B = new Bubble('Filter water', true, x2, 3, "margin");
+        let bubble9C = new Bubble('Eat fish', false, x3, 3, "margin");
 
 
         this.bubblesArray = [
@@ -83,7 +113,9 @@ class Game {
             [bubble4A, bubble4B, bubble4C],
             [bubble5A, bubble5B, bubble5C],
             [bubble6A, bubble6B, bubble6C],
-
+            [bubble7A, bubble7B, bubble7C],
+            [bubble8A, bubble8B, bubble8C],
+            [bubble9A, bubble9B, bubble9C],
         ];
 
         // this.bubblesArray = [
@@ -111,19 +143,20 @@ class Game {
     gameOver() {
 
         //Show game over display
-        document.getElementById("question-image").src = `./question_assets/GameOver.jpg`;
+        document.getElementById("question-image").src = `https://media.giphy.com/media/kf6Nd152s2wOQ/source.gif`;
         document.querySelector(".question h2").innerText = "Game Over";
 
         //Display message "scored points out of possible points"
+
         if (totalScore <= 0) {
             document.querySelector(".question-text").innerText = `${totalScore} from ${possiblePoints} points. You still have a lot of exploring to do!`;
         } else if (totalScore === 1) {
             document.querySelector(".question-text").innerText = `Nice try! You scored ${totalScore} of ${possiblePoints} points. You still have a lot of exploring to do!`;
-        } else if (totalScore >= 0 && totalScore < possiblePoints / 2) {
+        } else if (totalScore < (possiblePoints / 3)) {
             document.querySelector(".question-text").innerText = `Nice try! You scored ${totalScore} out of ${possiblePoints} points. Time to explore the underwater-world further!`;
-        } else if (totalScore <= possiblePoints / 3 && totalScore < possiblePoints / 4) {
+        } else if (totalScore < (possiblePoints / 2)) {
             document.querySelector(".question-text").innerText = `Well done! You've obviously been PondDipping before! You scored ${totalScore} out of ${possiblePoints} points.`;
-        } else if (totalScore <= possiblePoints / 4 && totalScore < possiblePoints) {
+        } else if (totalScore < possiblePoints) {
             document.querySelector(".question-text").innerText = `Great Job! You really know Attenborough's underwater-world! You scored ${totalScore} out of ${possiblePoints} points.`;
         } else if (totalScore === possiblePoints) {
             document.querySelector(".question-text").innerText = `Tremendous - You're a true PondDipping-Pro! You scored all ${possiblePoints} points!`;
