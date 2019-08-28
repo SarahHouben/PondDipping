@@ -67,43 +67,43 @@ class Game {
 
 
         //Level 1
-        let bubble1A = new Bubble('Zoos', false, x1, 1, "margin");
-        let bubble1B = new Bubble('Plants', false, x2, 1, "margin");
-        let bubble1C = new Bubble('Animals', true, x3, 1, "margin");
+        let bubble1A = new Bubble('Zoos', false, x1, 1);
+        let bubble1B = new Bubble('Plants', false, x2, 1);
+        let bubble1C = new Bubble('Animals', true, x3, 1);
 
-        let bubble2A = new Bubble('Fish', false, x1, 1, "margin");
-        let bubble2B = new Bubble('Crustaceans', false, x2, 1, "margin");
-        let bubble2C = new Bubble('Crocodiles', true, x3, 1, "margin");
+        let bubble2A = new Bubble('Fish', false, x1, 1);
+        let bubble2B = new Bubble('Crustaceans', false, x2, 1);
+        let bubble2C = new Bubble('Crocodiles', true, x3, 1);
 
-        let bubble3A = new Bubble('Fluidity', false, x1, 1, "margin");
-        let bubble3B = new Bubble('Quality', true, x2, 1, "margin");
-        let bubble3C = new Bubble('Saltiness', false, x3, 1, "margin");
+        let bubble3A = new Bubble('Fluidity', false, x1, 1);
+        let bubble3B = new Bubble('Quality', true, x2, 1);
+        let bubble3C = new Bubble('Saltiness', false, x3, 1);
 
         //Level 2
-        let bubble4A = new Bubble('1 – 5 cm', false, x1, 2, "margin");
-        let bubble4B = new Bubble('0.2 – 6 mm', true, x2, 2, "margin");
-        let bubble4C = new Bubble('10 cm', false, x3, 2, "margin");
+        let bubble4A = new Bubble('1 – 5 cm', false, x1, 2);
+        let bubble4B = new Bubble('0.2 – 6 mm', true, x2, 2);
+        let bubble4C = new Bubble('10 cm', false, x3, 2);
 
-        let bubble5A = new Bubble('Spiders', false, x1, 2, "margin");
-        let bubble5B = new Bubble('Dragonflies', false, x2, 2, "margin");
-        let bubble5C = new Bubble('Woodlice', true, x3, 2, "margin");
+        let bubble5A = new Bubble('Spiders', false, x1, 2);
+        let bubble5B = new Bubble('Dragonflies', false, x2, 2);
+        let bubble5C = new Bubble('Woodlice', true, x3, 2);
 
-        let bubble6A = new Bubble('Strength', false, x1, 2, "margin");
-        let bubble6B = new Bubble('Single eye', true, x2, 2, "margin");
-        let bubble6C = new Bubble('Colour', false, x3, 2, "margin");
+        let bubble6A = new Bubble('Strength', false, x1, 2);
+        let bubble6B = new Bubble('Single eye', true, x2, 2);
+        let bubble6C = new Bubble('Colour', false, x3, 2);
 
         //Level 3
-        let bubble7A = new Bubble('Spain', false, x1, 3, "margin");
-        let bubble7B = new Bubble('Canada', false, x2, 3, "margin");
-        let bubble7C = new Bubble('Russia', true, x3, 3, "margin");
+        let bubble7A = new Bubble('Spain', false, x1, 3);
+        let bubble7B = new Bubble('Canada', false, x2, 3);
+        let bubble7C = new Bubble('Russia', true, x3, 3);
 
-        let bubble8A = new Bubble('Predator', true, x1, 3, "margin");
-        let bubble8B = new Bubble('Herbivore', false, x2, 3, "margin");
-        let bubble8C = new Bubble('Omnivore', false, x3, 3, "margin");
+        let bubble8A = new Bubble('Predator', true, x1, 3);
+        let bubble8B = new Bubble('Herbivore', false, x2, 3);
+        let bubble8C = new Bubble('Omnivore', false, x3, 3);
 
-        let bubble9A = new Bubble('Are tidy', false, x1, 3, "margin");
-        let bubble9B = new Bubble('Filter water', true, x2, 3, "margin");
-        let bubble9C = new Bubble('Eat fish', false, x3, 3, "margin");
+        let bubble9A = new Bubble('Are tidy', false, x1, 3);
+        let bubble9B = new Bubble('Filter water', true, x2, 3);
+        let bubble9C = new Bubble('Eat fish', false, x3, 3);
 
 
         this.bubblesArray = [
@@ -195,9 +195,7 @@ class Game {
             // when level is 0, it becomes this.bubbles[0]
             for (let j = 0; j < groupBubbles.length; j++) {
                 groupBubbles[j].move();
-                // if (frameCount % 60 === 0) {
                 groupBubbles[j].display();
-                // }
             }
         }
 

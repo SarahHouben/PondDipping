@@ -1,5 +1,5 @@
 class Bubble {
-    constructor(answer, correct, x, level, margin) {
+    constructor(answer, correct, x, level) {
         // this.x = random(140, width - 90);
         // this.x = random(game.margin[0], game.margin[1]);
         // this.margin = margin;
@@ -38,13 +38,13 @@ class Bubble {
         //Change speed according to Level
         switch (this.level) {
             case 1:
-                this.y -= 1.9;
+                this.y -= 1.2;
                 break;
             case 2:
-                this.y -= 2.3;
+                this.y -= 1.5;
                 break;
             case 3:
-                this.y -= 2.6;
+                this.y -= 1.8;
                 break;
             default:
                 this.y -= 1.9;
@@ -97,6 +97,10 @@ class Bubble {
                 //Show updated Pluspoints-Score in browser
                 document.querySelector(".plus-points").innerText = `Points: ${plusPoints}`
 
+                //For Overlay
+                let previousLevel = game.bubbles[game.group][0].level;
+
+
                 //Pop all bubbles (prevents game over by left-over bubbles touching canvas top)
                 game.bubbles[game.group].splice(0, 3);
 
@@ -105,6 +109,16 @@ class Bubble {
 
                 //Initiate new question: Add 1 to   game.group counter to Start next Question group 
                 game.group += 1;
+                
+//OVERLAY
+                let currentLevel = game.bubbles[game.group][0].level;
+                if (previousLevel !== currentLevel) {
+                    let overlay = document.querySelector(".overlay");
+                    overlay.classList.add("overlay-show");
+                    setTimeout(function () {
+                        overlay.classList.remove("overlay-show");
+                    }, 1000)
+                }
 
 
                 //WRONG ANSWER

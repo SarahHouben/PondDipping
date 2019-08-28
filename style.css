@@ -20,8 +20,6 @@ body {
 /* XXXXXXXXXX           GAME CANVAS            XXXXXXXXXX */
 
 #canvas {
-    /* padding-right: 5vw;*/
-    /* border: 3px solid white; */
     margin: 0 3vw;
 }
 
@@ -219,4 +217,47 @@ button:hover {
     border: 3px solid white;
 
     transition: all 0.4s ease 0s;
+}
+
+
+
+/* XXXXXXXXXX                   OVERLAY                     XXXXXXXXXX */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    opacity: 0;
+
+    transition: opacity 0.6s ease;
+
+    pointer-events: none;
+}
+
+.overlay div {
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 3vw;
+}
+
+.overlay-show {
+    opacity: 1;
+}
+
+.overlay h2 {
+    font-size: 3em;
+    height: 200px;
+    width: 300px;
+
+    text-align: center;
 }
