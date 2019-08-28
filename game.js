@@ -118,6 +118,8 @@ class Game {
         document.querySelector(".question-text").innerText = "";
         document.querySelector(".question h2").innerText = "Game Over";
 
+        backgroundSound.stop();
+
         noLoop();
 
     };
