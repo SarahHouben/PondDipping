@@ -2,7 +2,7 @@ class Bubble {
     constructor(answer, correct, x, level) {
         this.x = x;
         this.y = random(height + 150, height + 350);
-        this.diameter = random(170, 200);
+        this.diameter = random(140, 180);
 
         this.col = color(218, 246, 250, 70);
 
@@ -22,7 +22,7 @@ class Bubble {
 
         //Shows answer in the bubble
         text(this.answer, this.x, this.y);
-        textSize(30);
+        textSize(25);
         textAlign(CENTER);
         textFont();
 
@@ -31,16 +31,16 @@ class Bubble {
         //Change speed according to Level
         switch (this.level) {
             case 1:
-                this.y -= 1.2;
+                this.y -= 1;
                 break;
             case 2:
-                this.y -= 1.5;
+                this.y -= 1.3;
                 break;
             case 3:
-                this.y -= 1.8;
+                this.y -= 1.6;
                 break;
             default:
-                this.y -= 1.9;
+                this.y -= 1.2;
         }
 
         //Display correct Level 

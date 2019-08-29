@@ -29,7 +29,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 3.5em;
+  font-size: 3.1em;
   margin-top: 0;
   margin-bottom: 4vh;
 }
@@ -37,21 +37,21 @@ h1 {
 h2 {
   margin: 0;
   padding: 0;
-  font-size: 2.4em;
+  font-size: 2.1em;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
+  margin: 0;
 }
 
 #information {
   width: 45vw;
-  /* padding-top: 0px; */
   padding-left: 3%;
   margin: 0 5vw;
   display: flex;
@@ -61,11 +61,16 @@ p {
 
 /* XXXXXXXXXX      UPPER -  INFORMATION SECTION (RIGHT SIDE)      XXXXXXXXXX */
 
+#information h1 {
+  margin-bottom: 0;
+  padding-bottom: 2vh;
+}
+
 .level {
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.75em;
 
-  margin: 1vh 0;
+  padding-top: 2vh;
 }
 
 .score {
@@ -73,7 +78,8 @@ p {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin: 0 0 3vh 0;
+
+  padding-top: 1vh;
 }
 
 .plus-points {
@@ -88,7 +94,7 @@ p {
   display: flex;
   align-items: center;
 
-  font-size: 1.8em;
+  font-size: 1.3em;
   font-weight: bold;
   color: black;
 
@@ -105,24 +111,24 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 8vh;
 }
 
 .question h2 {
   text-decoration: underline;
-  margin: 3vh 0 0 0;
 }
 
 .question p {
-  font-size: 1.8em;
+  font-size: 1.45em;
+  height: 12vh;
   width: 90%;
   line-height: 3.3vh;
-  margin-bottom: 100px;
+  padding-top: 20px;
 }
 
 img {
   width: 35vh;
   height: 35vh;
-  margin-bottom: 20px;
 }
 
 /* XXXXXXXXXX                   WELCOME SCREEN                      XXXXXXXXXX */
@@ -131,7 +137,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 12vh 10vh;
+  padding: 6vh 5vh 0vh 5vh;
+  box-sizing: border-box;
 }
 
 .intro-title {
@@ -154,7 +161,7 @@ img {
 }
 
 .intro h2 {
-  height: 12vh;
+  padding-bottom: 20px;
 }
 
 .intro p {
@@ -167,7 +174,7 @@ img {
 }
 
 .how-to h2 {
-  height: 12vh;
+  padding-bottom: 60px;
 }
 
 .how-to p {
@@ -184,10 +191,10 @@ a:hover {
 }
 
 button {
-  height: 50px;
-  width: 180px;
+  height: 40px;
+  width: 150px;
 
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: "Lexend Deca", sans-serif;
   text-decoration: none;
   color: black;

@@ -13,10 +13,10 @@ class Game {
         //Questions-Array
         this.questionArray = ["Zooplankton is the name for small aquatic…?",
             "What animal species can’t be found in the waters of Attenborough Nature Reserve?",
-            "The presence of Gammarids is an indicator for good water…?",
+            "Why is this crustacean called a cyclops? Because of its...?",
             "How large are Water Fleas?",
             "Water Slaters are closely related to…?",
-            "Why are crustaceans of the family Cyclopidae named after the mythical creature cyclops? Because of their…?",
+            "The presence of Gammarids is an indicator for good water…?",
             "Which country does the invasive Bloody Red Shrimp stem from?",
             "The tiny crustacean Polyphemus pediculus is a…?",
             "Water Fleas help maintain their habitats as they…?"
@@ -37,9 +37,9 @@ class Game {
 
 
         //x-corrdinates for the positioning of the bubbles
-        let x1 = random(110, (width / 3) - 100);
-        let x2 = random((width / 3) + 100, (width / 3) * 2 - 100);
-        let x3 = random((width / 3) * 2 + 100, width - 110);
+        let x1 = random(110, (width / 3) - 90);
+        let x2 = random((width / 3) + 90, (width / 3) * 2 - 90);
+        let x3 = random((width / 3) * 2 + 90, width - 90);
 
 
         //Level 1
@@ -51,9 +51,9 @@ class Game {
         let bubble2B = new Bubble('Crustaceans', false, x2, 1);
         let bubble2C = new Bubble('Crocodiles', true, x3, 1);
 
-        let bubble3A = new Bubble('Fluidity', false, x1, 1);
-        let bubble3B = new Bubble('Quality', true, x2, 1);
-        let bubble3C = new Bubble('Saltiness', false, x3, 1);
+        let bubble3A = new Bubble('Strength', false, x1, 1);
+        let bubble3B = new Bubble('Single eye', true, x2, 1);
+        let bubble3C = new Bubble('Colour', false, x3, 1);
 
         //Level 2
         let bubble4A = new Bubble('1 – 5 cm', false, x1, 2);
@@ -64,9 +64,9 @@ class Game {
         let bubble5B = new Bubble('Dragonflies', false, x2, 2);
         let bubble5C = new Bubble('Woodlice', true, x3, 2);
 
-        let bubble6A = new Bubble('Strength', false, x1, 2);
-        let bubble6B = new Bubble('Single eye', true, x2, 2);
-        let bubble6C = new Bubble('Colour', false, x3, 2);
+        let bubble6A = new Bubble('Fluidity', false, x1, 2);
+        let bubble6B = new Bubble('Quality', true, x2, 2);
+        let bubble6C = new Bubble('Saltiness', false, x3, 2);
 
         //Level 3
         let bubble7A = new Bubble('Spain', false, x1, 3);
