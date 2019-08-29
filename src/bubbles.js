@@ -90,14 +90,13 @@ class Bubble {
                 //Show updated Pluspoints-Score in browser
                 document.querySelector(".plus-points").innerText = `Points: ${plusPoints}`
 
-                
+
                 //Set variable for Overlay-functionality
                 var previousLevel
                 let group = game.bubbles[game.group]
                 //Set Default value for current Level for when last level is reached.
                 if (!group) previousLevel = 0;
                 else previousLevel = game.bubbles[game.group][0].level;
-
 
                 //Pop all bubbles (prevents game over by left-over bubbles touching canvas top)
                 game.bubbles[game.group].splice(0, 3);
@@ -113,7 +112,7 @@ class Bubble {
                 var currentLevel
                 let groupTwo = game.bubbles[game.group]
                 //Set Default value for current Level for when last level is reached.
-                if (!groupTwo) currentLevel = 0;
+                if (!groupTwo) currentLevel = previousLevel;
                 else currentLevel = game.bubbles[game.group][0].level;
 
                 if (previousLevel !== currentLevel) {
