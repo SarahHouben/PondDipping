@@ -11,15 +11,15 @@ class Game {
 
 
         //Questions-Array
-        this.questionArray = ["Zooplankton is the name for small aquatic…",
+        this.questionArray = ["Zooplankton is the name for small aquatic…?",
             "What animal species can’t be found in the waters of Attenborough Nature Reserve?",
-            "The presence of Gammarids is an indicator for good water…",
+            "The presence of Gammarids is an indicator for good water…?",
             "How large are Water Fleas?",
-            "Water Slaters are closely related to…",
-            "Why are crustaceans of the family Cyclopidae named after the mythical creature cyclops? Because of their…",
+            "Water Slaters are closely related to…?",
+            "Why are crustaceans of the family Cyclopidae named after the mythical creature cyclops? Because of their…?",
             "Which country does the invasive Bloody Red Shrimp stem from?",
-            "The tiny crustacean Polyphemus pediculus is a…",
-            "Water Fleas help maintain their habitats as they…"
+            "The tiny crustacean Polyphemus pediculus is a…?",
+            "Water Fleas help maintain their habitats as they…?"
         ];
 
         //Image-Array
