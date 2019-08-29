@@ -107,7 +107,7 @@ class Game {
     gameOver() {
 
         //Show game over display
-        document.getElementById("question-image").src = `https://media.giphy.com/media/kf6Nd152s2wOQ/source.gif`;
+        document.getElementById("question-image").src = `./style_assets/game_over_daphnia.gif`;
         document.querySelector(".question h2").innerText = "Game Over";
 
         //Display message "scored points out of possible points"
