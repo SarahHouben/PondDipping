@@ -37,9 +37,9 @@ class Game {
 
 
         //x-corrdinates for the positioning of the bubbles
-        let x1 = random(100, (width / 3) - 100);
+        let x1 = random(110, (width / 3) - 100);
         let x2 = random((width / 3) + 100, (width / 3) * 2 - 100);
-        let x3 = random((width / 3) * 2 + 100, width - 100);
+        let x3 = random((width / 3) * 2 + 100, width - 110);
 
 
         //Level 1
