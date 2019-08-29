@@ -24,14 +24,14 @@ class Game {
 
         //Image-Array
         this.imageArray = ["./question_assets/Q1.png",
-            "./question_assets/Q2.png",
-            "./question_assets/Q3.png",
-            "./question_assets/Q4.png",
-            "./question_assets/Q5.png",
-            "./question_assets/Q6.png",
-            "./question_assets/Q7.png",
-            "./question_assets/Q8.png",
-            "./question_assets/Q9.png"
+            "question_assets/Q2.png",
+            "question_assets/Q3.png",
+            "question_assets/Q4.png",
+            "question_assets/Q5.png",
+            "question_assets/Q6.png",
+            "question_assets/Q7.png",
+            "question_assets/Q8.png",
+            "question_assets/Q9.png"
         ];
 
 
@@ -107,7 +107,7 @@ class Game {
     gameOver() {
 
         //Show game over display
-        document.getElementById("question-image").src = `./style_assets/game_over_daphnia.gif`;
+        document.getElementById("question-image").src = `style_assets/game_over_daphnia.gif`;
         document.querySelector(".question h2").innerText = "Game Over";
 
         //Display message "scored points out of possible points"

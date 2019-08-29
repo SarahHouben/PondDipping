@@ -4,8 +4,8 @@ function preload() {
 
     //Sound Effect for popping bubble
     soundFormats('mp3');
-    bubbleSound = loadSound('./sound_assets/bubble_pop.mp3');
-    backgroundSound = loadSound('./sound_assets/Wasser sprudelt.mp3')
+    bubbleSound = loadSound('sound_assets/bubble_pop.mp3');
+    backgroundSound = loadSound('sound_assets/Wasser sprudelt.mp3')
 
 }
 
