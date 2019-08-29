@@ -3,31 +3,7 @@ class Game {
     constructor() {
         this.background = new Background();
         this.group = 0;
-        // this.margin = [];
     };
-
-
-    // createMargin() {
-
-    //     let space = (width / 3);
-    //     // console.log(space);
-    //     for (let i = 0; i < 3; i++) {
-    //         for (let j = 2; j > 0; j--) {
-
-    //             this.margin = [i * space, width - j * space]
-    //             console.log(i * space);
-    //             console.log(width - j * space);
-    //             // console.log(this.margin);
-    //             // console.log(i);
-    //             // console.log(j);
-    //         }
-    //     }
-    //     console.log(this.margin);
-    // };
-
-
-
-
 
     setup() {
 
@@ -118,20 +94,8 @@ class Game {
             [bubble9A, bubble9B, bubble9C],
         ];
 
-        // this.bubblesArray = [
-        //     {
-        //         bubbles:  [bubble1A, bubble1B, bubble1C],
-        //         image: "./question_assets/Q1.jpg",
-        //         question: "Question1"
-        //     },
-        //     {
-        //         bubbles:  [bubble2A, bubble2B, bubble2C],
-        //         image: "....",
-        //         question: "Question2"
-        //     },
-        // ];
-
         this.bubbles = [...this.bubblesArray];
+
 
         //Calculate possible points (each correct answer is worth one point)
         possiblePoints = this.bubblesArray.length;
@@ -147,7 +111,6 @@ class Game {
         document.querySelector(".question h2").innerText = "Game Over";
 
         //Display message "scored points out of possible points"
-
         if (totalScore <= 0) {
             document.querySelector(".question-text").innerText = `${totalScore} from ${possiblePoints} points. You still have a lot of exploring to do!`;
         } else if (totalScore === 1) {

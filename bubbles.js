@@ -1,10 +1,5 @@
 class Bubble {
     constructor(answer, correct, x, level) {
-        // this.x = random(140, width - 90);
-        // this.x = random(game.margin[0], game.margin[1]);
-        // this.margin = margin;
-        // console.log(game.margin[0]);
-
         this.x = x;
         this.y = random(height + 150, height + 350);
         this.diameter = random(170, 200);
@@ -12,10 +7,8 @@ class Bubble {
         this.col = color(218, 246, 250, 70);
 
         this.level = level;
-
         this.answer = answer;
         this.correct = correct;
-
     }
 
 
@@ -97,8 +90,13 @@ class Bubble {
                 //Show updated Pluspoints-Score in browser
                 document.querySelector(".plus-points").innerText = `Points: ${plusPoints}`
 
-                //For Overlay
-                let previousLevel = game.bubbles[game.group][0].level;
+                
+                //Set variable for Overlay-functionality
+                var previousLevel
+                let group = game.bubbles[game.group]
+                //Set Default value for current Level for when last level is reached.
+                if (!group) previousLevel = 0;
+                else previousLevel = game.bubbles[game.group][0].level;
 
 
                 //Pop all bubbles (prevents game over by left-over bubbles touching canvas top)
@@ -109,9 +107,15 @@ class Bubble {
 
                 //Initiate new question: Add 1 to   game.group counter to Start next Question group 
                 game.group += 1;
-                
-//OVERLAY
-                let currentLevel = game.bubbles[game.group][0].level;
+
+
+                //Overlay - show Overlay when next level is reached. 
+                var currentLevel
+                let groupTwo = game.bubbles[game.group]
+                //Set Default value for current Level for when last level is reached.
+                if (!groupTwo) currentLevel = 0;
+                else currentLevel = game.bubbles[game.group][0].level;
+
                 if (previousLevel !== currentLevel) {
                     let overlay = document.querySelector(".overlay");
                     overlay.classList.add("overlay-show");
@@ -119,6 +123,8 @@ class Bubble {
                         overlay.classList.remove("overlay-show");
                     }, 1000)
                 }
+
+
 
 
                 //WRONG ANSWER
@@ -139,6 +145,7 @@ class Bubble {
 
             // Calculate total Score
             totalScore = plusPoints - minusPoints;
+
             // Show Total Score in browser
             document.querySelector(".total-score").innerText = `Score: ${totalScore}`
         }

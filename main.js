@@ -6,7 +6,6 @@ function preload() {
     soundFormats('mp3');
     bubbleSound = loadSound('./sound_assets/bubble_pop.mp3');
     backgroundSound = loadSound('./sound_assets/Wasser sprudelt.mp3')
-    // backgroundSound = loadSound('./sound_assets/bubble_background.mp3')
 
 }
 
@@ -16,8 +15,6 @@ function setup() {
     background("black");
 
     game.setup();
-
-    // game.createMargin();
 
     backgroundSound.setVolume(0.05);
     backgroundSound.loop();
