@@ -34,9 +34,9 @@ class Game {
     ];
 
     //x-corrdinates for the positioning of the bubbles
-    let x1 = random(110, width / 3 - 90);
-    let x2 = random(width / 3 + 90, (width / 3) * 2 - 90);
-    let x3 = random((width / 3) * 2 + 90, width - 110);
+    let x1 = random(110, width / 3 - 100);
+    let x2 = random(width / 3 + 100, (width / 3) * 2 - 100);
+    let x3 = random((width / 3) * 2 + 100, width - 110);
 
     //Level 1
     let bubble1A = new Bubble("Zoos", false, x1, 1);
