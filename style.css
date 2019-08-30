@@ -120,10 +120,11 @@ p {
 
 .question p {
   font-size: 1.45em;
-  height: 12vh;
+  height: 11vh;
   width: 90%;
   line-height: 3.3vh;
   padding-top: 20px;
+  margin-bottom: 1vh;
 }
 
 img {
