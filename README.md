@@ -1,7 +1,7 @@
 # PondDipping - Ironhack Module 1 Game
 
 
-PondDipping is a short interactive quiz which was built using JavaScript, HTML, CSS and utilizes DOM-manipulation and the library p5.js.
+PondDipping is a short interactive quiz which was built for desktop using JavaScript, HTML, CSS and utilizes DOM-manipulation and the library p5.js.
 
 
 # How to Play
